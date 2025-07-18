@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow admin areas (when implemented)
+# Disallow: /admin/
+# Disallow: /api/auth/
+
+Sitemap: https://energia.com/sitemap.xml
