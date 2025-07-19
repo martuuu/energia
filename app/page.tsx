@@ -1,7 +1,33 @@
-import Navbar from "@/components/navbar"
+import { Metadata } from 'next'
 import Hero from "@/components/hero"
 import Link from "next/link"
 import { Clock, Play, Calendar, MapPin, Users, Phone, Instagram, Youtube, Mail } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: 'Grupo de Running y Funcional en Bahía Blanca | ENERGIA',
+  description: 'Únete al grupo ENERGIA en Bahía Blanca. Entrenamientos de running y funcional al aire libre, seguimiento personalizado presencial y remoto. Comunidad de corredores apasionados.',
+  keywords: [
+    'grupo running Bahía Blanca',
+    'entrenamiento funcional outdoor',
+    'running club Buenos Aires',
+    'coaching personalizado',
+    'entrenamiento remoto',
+    'comunidad runners Argentina',
+    'preparación maratón',
+    'running técnico'
+  ],
+  openGraph: {
+    title: 'ENERGIA - Tu Grupo de Running en Bahía Blanca',
+    description: 'Entrenamientos de running y funcional al aire libre. Seguimiento personalizado presencial y remoto. Únete a nuestra comunidad en Bahía Blanca.',
+    images: ['/images/logo-energia.png'],
+    url: 'https://energia-webapp.vercel.app'
+  },
+  twitter: {
+    title: 'ENERGIA - Grupo de Running y Funcional | Bahía Blanca',
+    description: 'Entrenamientos al aire libre, seguimiento personalizado, comunidad apasionada. Únete a ENERGIA en Bahía Blanca.',
+    images: ['/images/logo-energia.png']
+  }
+}
 
 // WhatsApp Icon component
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -164,7 +190,6 @@ function formatDate(dateString: string) {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
       <Hero />
 
       {/* Técnica Section */}
@@ -181,7 +206,7 @@ export default function HomePage() {
             {exercises.map((exercise) => (
               <Link
                 key={exercise.id}
-                href={`/ejercicio/${exercise.id}`}
+                href={`/tecnica/${exercise.id}`}
                 className="group bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
               >
                 <div className="relative">
@@ -564,7 +589,7 @@ export default function HomePage() {
             <div className="text-3xl font-bold mb-2">ENERGIA</div>
             <div className="text-team-orange font-medium">Funcional & Running</div>
           </div>
-          <p className="text-blue-100">© 2024 ENERGIA - Potenciando atletas, transformando vidas</p>
+          <p className="text-blue-100">© 2025 ENERGIA - Potenciando atletas</p>
         </div>
       </footer>
     </div>

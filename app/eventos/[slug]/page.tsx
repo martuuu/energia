@@ -16,10 +16,9 @@ export default function TecnicaPage() {
       <section className="relative bg-gradient-to-br from-team-blue via-team-blue-dark to-team-orange/60 pt-0 pb-20">
         <Navbar />
         
-        <div className="pt-20 max-w-6xl mx-auto px-4">
-          <Link href="/" className="inline-flex items-center text-white hover:text-team-orange mb-8">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Volver al inicio
+        <div className="pt-16 max-w-6xl mx-auto px-4">
+          <Link href="/eventos" className="inline-flex items-center text-white hover:text-team-orange mb-8 transition-colors duration-200">
+            <ArrowLeft className="w-5 h-5" />
           </Link>
 
           <div className="text-center text-white">

@@ -20,7 +20,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
       const timer = setTimeout(() => {
         setCurrentPath(pathname)
         setIsTransitioning(false)
-      }, 150)
+      }, 100)
 
       return () => clearTimeout(timer)
     }
@@ -28,10 +28,10 @@ export default function PageTransition({ children }: { children: React.ReactNode
 
   return (
     <div 
-      className={`min-h-screen transition-all duration-300 ease-out ${
+      className={`min-h-screen transition-all duration-200 ease-out ${
         isTransitioning 
-          ? 'opacity-95 transform scale-[0.99] filter blur-[1px]' 
-          : 'opacity-100 transform scale-100 filter blur-none'
+          ? 'opacity-0 transform translate-x-2' 
+          : 'opacity-100 transform translate-x-0'
       }`}
     >
       {children}

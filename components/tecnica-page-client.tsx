@@ -102,7 +102,7 @@ function ShareButton({ exercise }: { exercise: any }) {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setUrl(`${window.location.origin}/ejercicio/${exercise.id}`)
+      setUrl(`${window.location.origin}/tecnica/${exercise.id}`)
     }
   }, [exercise.id])
 
@@ -171,7 +171,7 @@ export default function TecnicaPageClient() {
               key={exercise.id}
               className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
             >
-              <Link href={`/ejercicio/${exercise.id}`}>
+              <Link href={`/tecnica/${exercise.id}`}>
                 <div className="relative">
                   <img
                     src={exercise.videoThumbnail || "/placeholder.svg"}
@@ -197,7 +197,7 @@ export default function TecnicaPageClient() {
                     <ShareButton exercise={exercise} />
                   </div>
                 </div>
-                <Link href={`/ejercicio/${exercise.id}`}>
+                <Link href={`/tecnica/${exercise.id}`}>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 hover:text-team-orange transition-colors">
                     {exercise.title}
                   </h3>

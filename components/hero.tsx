@@ -1,10 +1,11 @@
 "use client"
 
 import { ArrowDown } from "lucide-react"
+import Navbar from "./navbar"
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-team-blue via-team-blue-dark to-team-orange/60 overflow-hidden -mt-20">
+    <section className="relative min-h-screen bg-gradient-to-br from-team-blue via-team-blue-dark to-team-orange/60 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {/* Círculos originales mejorados */}
@@ -27,8 +28,23 @@ export default function Hero() {
           className="absolute bottom-40 right-8 w-36 h-36 bg-white/6 rounded-full animate-spin"
           style={{ animationDuration: "25s" }}
         ></div>
+        {/* Círculos adicionales nuevos */}
+        <div className="absolute top-12 right-44 w-18 h-18 bg-team-orange/8 rounded-full animate-pulse delay-1200"></div>
+        <div className="absolute bottom-60 right-36 w-22 h-22 bg-white/12 rounded-full animate-bounce delay-400"></div>
+        <div
+          className="absolute top-72 right-24 w-14 h-14 bg-team-orange/18 rounded-full animate-spin"
+          style={{ animationDuration: "30s" }}
+        ></div>
+        <div className="absolute bottom-12 right-52 w-26 h-26 bg-white/14 rounded-full animate-pulse delay-900"></div>
+        <div className="absolute top-48 right-4 w-30 h-30 bg-team-orange/6 rounded-full animate-bounce delay-1400"></div>
+        <div
+          className="absolute bottom-76 right-28 w-34 h-34 bg-white/4 rounded-full animate-spin"
+          style={{ animationDuration: "35s" }}
+        ></div>
       </div>
 
+      <Navbar />
+      
       <div className="relative max-w-6xl mx-auto px-4 py-20 flex items-center min-h-screen">
         <div className="grid md:grid-cols-2 gap-12 items-center w-full">
           {/* Left Content */}

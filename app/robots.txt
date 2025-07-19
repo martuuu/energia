@@ -5,4 +5,4 @@ Allow: /
 # Disallow: /admin/
 # Disallow: /api/auth/
 
-Sitemap: https://energia.com/sitemap.xml
+Sitemap: https://energia-webapp.vercel.app/sitemap.xml

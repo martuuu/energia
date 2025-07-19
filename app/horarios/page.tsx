@@ -61,14 +61,42 @@ export default function HorariosPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-team-blue/10 via-purple-team/5 to-team-orange/10">
       {/* Hero Section with Navbar */}
-      <section className="relative bg-gradient-to-br from-team-blue via-team-blue-dark to-team-orange/60 pt-0 pb-24 min-h-[520px] flex flex-col">
+      <section className="relative bg-gradient-to-br from-team-blue via-team-blue-dark to-team-orange/60 pt-0 pb-24 min-h-[520px] flex flex-col overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-28 right-24 w-30 h-30 bg-team-orange/10 rounded-full animate-pulse delay-300"></div>
+          <div className="absolute top-16 right-48 w-22 h-22 bg-white/15 rounded-full animate-bounce delay-1000"></div>
+          <div className="absolute bottom-36 right-32 w-26 h-26 bg-team-orange/20 rounded-full animate-pulse delay-500"></div>
+          <div
+            className="absolute top-44 right-12 w-34 h-34 bg-white/8 rounded-full animate-spin"
+            style={{ animationDuration: "19s" }}
+          ></div>
+          <div className="absolute bottom-20 right-52 w-18 h-18 bg-team-orange/12 rounded-full animate-bounce delay-700"></div>
+          <div
+            className="absolute top-60 right-28 w-40 h-40 bg-white/10 rounded-full animate-spin"
+            style={{ animationDuration: "17s" }}
+          ></div>
+          {/* Nuevos círculos adicionales */}
+          <div className="absolute top-8 right-64 w-16 h-16 bg-team-orange/14 rounded-full animate-pulse delay-850"></div>
+          <div className="absolute bottom-52 right-16 w-24 h-24 bg-white/12 rounded-full animate-bounce delay-450"></div>
+          <div
+            className="absolute top-52 right-44 w-20 h-20 bg-team-orange/8 rounded-full animate-spin"
+            style={{ animationDuration: "27s" }}
+          ></div>
+          <div className="absolute bottom-8 right-36 w-14 h-14 bg-white/16 rounded-full animate-pulse delay-1150"></div>
+          <div className="absolute top-24 right-8 w-28 h-28 bg-team-orange/18 rounded-full animate-bounce delay-1350"></div>
+          <div
+            className="absolute bottom-44 right-60 w-32 h-32 bg-white/6 rounded-full animate-spin"
+            style={{ animationDuration: "23s" }}
+          ></div>
+        </div>
+        
         <Navbar />
         
-        <div className="flex-1 flex items-center pt-16 max-w-6xl mx-auto px-4 w-full">
+        <div className="flex-1 flex items-center pt-4 max-w-6xl mx-auto px-4 w-full relative">
           <div className="w-full">
             <Link href="/" className="inline-flex items-center text-white hover:text-team-orange mb-8 transition-colors duration-200">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Volver al inicio
+              <ArrowLeft className="w-5 h-5" />
             </Link>
 
             <div className="text-center text-white">
@@ -86,7 +114,7 @@ export default function HorariosPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             {/* Header */}
-            <div className="bg-gradient-to-r from-team-blue to-team-orange p-6">
+            <div className="bg-team-blue p-6">
               <h2 className="text-2xl font-bold text-white text-center">Cronograma Semanal</h2>
             </div>
 
@@ -160,7 +188,7 @@ export default function HorariosPage() {
                 <Clock className="w-6 h-6 text-team-blue" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Puntualidad</h3>
-              <p className="text-gray-600 text-sm">Te pedimos llegar 10 minutos antes para prepararte adecuadamente</p>
+              <p className="text-gray-600 text-sm">Te recomendamos llegar 10 minutos antes para prepararte adecuadamente</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-md text-center">
@@ -169,7 +197,7 @@ export default function HorariosPage() {
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Ubicaciones</h3>
               <p className="text-gray-600 text-sm">
-                Entrenamos en los mejores espacios de Buenos Aires para tu comodidad
+                Entrenamos en los mejores espacios de Bahia Blanca para tu comodidad
               </p>
             </div>
 
@@ -178,7 +206,7 @@ export default function HorariosPage() {
                 <span className="text-purple-team font-bold text-xl">👥</span>
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Grupos Reducidos</h3>
-              <p className="text-gray-600 text-sm">Máximo 12 personas por clase para atención personalizada</p>
+              <p className="text-gray-600 text-sm">Máximo 20 personas por clase para atención personalizada</p>
             </div>
           </div>
         </div>

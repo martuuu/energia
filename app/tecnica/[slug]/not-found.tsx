@@ -14,11 +14,11 @@ export default function NotFound() {
         </div>
         
         <h1 className="text-3xl font-bold text-gray-900 mb-4">
-          Ejercicio no encontrado
+          Artículo no encontrado
         </h1>
         
         <p className="text-gray-600 mb-8">
-          Lo sentimos, el ejercicio que buscas no existe o ha sido movido.
+          Lo sentimos, el artículo técnico que buscas no existe o ha sido movido.
         </p>
         
         <div className="space-y-4">
@@ -26,8 +26,8 @@ export default function NotFound() {
             href="/tecnica" 
             className="inline-flex items-center justify-center w-full bg-team-orange text-white py-3 px-6 rounded-lg hover:bg-team-blue transition-colors font-medium shadow-lg"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Ver todos los ejercicios
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            Ver todos los artículos técnicos
           </Link>
           
           <Link 

@@ -116,131 +116,66 @@ export default function ContactoPageClient() {
         </div>
 
         {/* Contact Form Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Form */}
-          <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Envianos un mensaje</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nombre
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-team-orange focus:border-transparent transition-all duration-300"
-                    placeholder="Tu nombre"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-team-orange focus:border-transparent transition-all duration-300"
-                    placeholder="tu@email.com"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Mensaje
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-team-orange focus:border-transparent transition-all duration-300"
-                  placeholder="Contanos en qué podemos ayudarte..."
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-team-orange text-white py-3 px-6 rounded-lg hover:bg-team-orange-light transition-all duration-300 font-medium shadow-md hover:shadow-lg hover:scale-105"
-              >
-                Enviar mensaje
-              </button>
-            </form>
-          </div>
-
-          {/* Contact Info & Social */}
-          <div className="space-y-8">
-            {/* Contact Info */}
-            <div className="bg-gradient-to-br from-team-blue via-team-blue-dark to-team-orange/60 rounded-xl p-8 text-white">
-              <h3 className="text-2xl font-semibold mb-6">Información de contacto</h3>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3 text-team-orange" />
-                  <span>+54 9 11 1234-5678</span>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 mr-3 text-team-orange" />
-                  <span>info@energia.com</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Social Media */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-2xl">
+            {/* Form */}
             <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">Seguinos en nuestras redes</h3>
-              <div className="flex space-x-4">
-                <a
-                  href="https://youtube.com/@energia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 bg-red-600 text-white p-4 rounded-lg hover:bg-red-700 transition-all duration-300 text-center shadow-md hover:shadow-lg hover:scale-105"
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">Envianos un mensaje</h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      Nombre
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-team-orange focus:border-transparent transition-all duration-300"
+                      placeholder="Tu nombre"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-team-orange focus:border-transparent transition-all duration-300"
+                      placeholder="tu@email.com"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Mensaje
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-team-orange focus:border-transparent transition-all duration-300"
+                    placeholder="Contanos en qué podemos ayudarte..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-team-orange text-white py-3 px-6 rounded-lg hover:bg-team-orange-light transition-all duration-300 font-medium shadow-md hover:shadow-lg hover:scale-105"
                 >
-                  <Youtube className="w-6 h-6 mx-auto mb-2" />
-                  <span className="text-sm font-medium">YouTube</span>
-                </a>
-                <a
-                  href="https://instagram.com/energia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 text-center shadow-md hover:shadow-lg hover:scale-105"
-                >
-                  <Instagram className="w-6 h-6 mx-auto mb-2" />
-                  <span className="text-sm font-medium">Instagram</span>
-                </a>
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div className="bg-gradient-to-r from-team-orange to-team-blue rounded-xl p-8 text-white text-center">
-              <h3 className="text-xl font-semibold mb-3">¿Listo para empezar?</h3>
-              <p className="text-blue-100 mb-4">
-                Únete a nuestra comunidad de atletas y transforma tu vida
-              </p>
-              <div className="flex space-x-3">
-                <a
-                  href="https://wa.me/5491112345678"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 bg-white text-team-orange py-2 px-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-medium shadow-md hover:shadow-lg"
-                >
-                  Consultar
-                </a>
-                <a
-                  href="#"
-                  className="flex-1 bg-white/20 text-white py-2 px-4 rounded-lg hover:bg-white/30 transition-all duration-300 font-medium border border-white/30"
-                >
-                  Ver horarios
-                </a>
-              </div>
+                  Enviar mensaje
+                </button>
+              </form>
             </div>
           </div>
         </div>

@@ -1,0 +1,39 @@
+{
+  "name": "ENERGIA - Grupo de Running y Funcional",
+  "short_name": "ENERGIA",
+  "description": "Grupo de running y entrenamiento funcional al aire libre en Bahía Blanca, Buenos Aires",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4338CA",
+  "orientation": "portrait",
+  "categories": ["sports", "fitness", "health"],
+  "lang": "es-AR",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Página principal de ENERGIA"
+    }
+  ]
+}
