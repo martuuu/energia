@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Clock, Play, Share2, Facebook, Twitter, Linkedin } from "lucide-react"
 
@@ -98,7 +98,13 @@ function formatDate(dateString: string) {
 
 function ShareButton({ exercise }: { exercise: any }) {
   const [showShare, setShowShare] = useState(false)
-  const url = `${window.location.origin}/ejercicio/${exercise.id}`
+  const [url, setUrl] = useState("")
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setUrl(`${window.location.origin}/ejercicio/${exercise.id}`)
+    }
+  }, [exercise.id])
 
   const shareLinks = {
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
